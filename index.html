@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salmón del Sur | Fresco y ahumado</title>
+  <meta name="description" content="Salmón chileno fresco y ahumado con envío a Puerto Montt, Alerce y todo Chile." />
+  <link rel="alternate" hreflang="es-CL" href="index.html?lang=es-CL" />
+  <link rel="alternate" hreflang="es-AR" href="index.html?lang=es-AR" />
+  <link rel="alternate" hreflang="en" href="index.html?lang=en" />
+  <link rel="alternate" hreflang="x-default" href="index.html?lang=es-CL" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            mar: "#0b3d4a",
+            hielo: "#e8f4f6",
+            salmon: "#e07a5f"
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-hielo text-slate-800">
+  <header class="bg-mar text-white">
+    <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between gap-3">
+      <a href="#inicio" class="font-bold text-lg">Salmón del Sur</a>
+      <nav class="hidden sm:flex gap-4 text-sm">
+        <a class="hover:underline" href="#productos" data-i18n="nav.products">Productos</a>
+        <a class="hover:underline" href="#nosotros" data-i18n="nav.about">Nosotros</a>
+        <a class="hover:underline" href="#faq" data-i18n="nav.faq">FAQ</a>
+        <a class="hover:underline" href="#contacto" data-i18n="nav.contact">Contacto</a>
+      </nav>
+      <div class="flex gap-2 text-xs">
+        <button class="lang-btn px-2 py-1 rounded bg-white/15" data-lang="es-CL">CL</button>
+        <button class="lang-btn px-2 py-1 rounded bg-white/15" data-lang="es-AR">AR</button>
+        <button class="lang-btn px-2 py-1 rounded bg-white/15" data-lang="en">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="max-w-5xl mx-auto px-4 py-10 grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <p class="text-salmon font-semibold mb-2" data-i18n="hero.kicker">Directo del sur de Chile</p>
+        <h1 class="text-3xl sm:text-5xl font-bold text-mar mb-4" data-i18n="hero.title">Salmón fresco y ahumado a domicilio</h1>
+        <p class="mb-6 text-slate-600" data-i18n="hero.text">Calidad de Patagonia, envíos a Puerto Montt, Alerce y todo Chile. Pedido fácil por WhatsApp.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="#productos" class="bg-salmon text-white px-5 py-3 rounded-lg font-semibold" data-i18n="hero.cta1">Ver productos</a>
+          <a id="whatsappBtn" href="#" class="bg-mar text-white px-5 py-3 rounded-lg font-semibold" data-i18n="hero.cta2">Pedir por WhatsApp</a>
+        </div>
+      </div>
+      <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=900&q=70"
+           alt="Filete de salmón fresco"
+           class="w-full h-64 sm:h-80 object-cover rounded-2xl shadow" />
+    </section>
+
+    <section id="productos" class="bg-white py-12">
+      <div class="max-w-5xl mx-auto px-4">
+        <h2 class="text-2xl font-bold text-mar mb-6" data-i18n="products.title">Productos destacados</h2>
+        <div class="grid sm:grid-cols-3 gap-5">
+          <article class="border rounded-xl p-4 bg-hielo">
+            <img src="https://images.unsplash.com/photo-1559737558-2f5a35f4523b?auto=format&fit=crop&w=700&q=70" alt="Salmón fresco" class="h-36 w-full object-cover rounded-lg mb-3">
+            <h3 class="font-bold" data-i18n="products.fresh.title">Salmón fresco</h3>
+            <p class="text-sm text-slate-600 mb-3" data-i18n="products.fresh.text">Filete listo para horno o plancha.</p>
+            <p class="font-semibold mb-3" data-price="fresh">$12.900 / kg</p>
+            <a href="#contacto" class="block text-center bg-salmon text-white rounded-lg py-2" data-i18n="products.buy">Comprar</a>
+          </article>
+          <article class="border rounded-xl p-4 bg-hielo">
+            <img src="https://images.unsplash.com/photo-1485921325833-c519f76c4927?auto=format&fit=crop&w=700&q=70" alt="Salmón ahumado" class="h-36 w-full object-cover rounded-lg mb-3">
+            <h3 class="font-bold" data-i18n="products.smoked.title">Salmón ahumado</h3>
+            <p class="text-sm text-slate-600 mb-3" data-i18n="products.smoked.text">Pack de 500 g, listo para servir.</p>
+            <p class="font-semibold mb-3" data-price="smoked">$9.900 / pack</p>
+            <a href="#contacto" class="block text-center bg-salmon text-white rounded-lg py-2" data-i18n="products.buy">Comprar</a>
+          </article>
+          <article class="border rounded-xl p-4 bg-hielo">
+            <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=700&q=70" alt="Pack familiar" class="h-36 w-full object-cover rounded-lg mb-3">
+            <h3 class="font-bold" data-i18n="products.pack.title">Pack familiar</h3>
+            <p class="text-sm text-slate-600 mb-3" data-i18n="products.pack.text">Fresco + ahumado para la semana.</p>
+            <p class="font-semibold mb-3" data-price="pack">$21.900</p>
+            <a href="#contacto" class="block text-center bg-salmon text-white rounded-lg py-2" data-i18n="products.buy">Comprar</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="nosotros" class="max-w-5xl mx-auto px-4 py-12">
+      <h2 class="text-2xl font-bold text-mar mb-3" data-i18n="about.title">Acerca de nosotros</h2>
+      <p class="text-slate-600 max-w-3xl" data-i18n="about.text">Somos una pyme del sur de Chile. Vendemos salmón fresco y ahumado con foco en frescura, precio claro y envío a la Región de Los Lagos.</p>
+    </section>
+
+    <section id="faq" class="bg-white py-12">
+      <div class="max-w-5xl mx-auto px-4">
+        <h2 class="text-2xl font-bold text-mar mb-4" data-i18n="faq.title">Preguntas frecuentes</h2>
+        <details class="mb-3 border rounded-lg p-4">
+          <summary class="font-semibold" data-i18n="faq.q1">¿Hacen envíos a Alerce y Puerto Montt?</summary>
+          <p class="mt-2 text-slate-600" data-i18n="faq.a1">Sí. También enviamos a otras ciudades de Chile.</p>
+        </details>
+        <details class="mb-3 border rounded-lg p-4">
+          <summary class="font-semibold" data-i18n="faq.q2">¿Cómo se paga?</summary>
+          <p class="mt-2 text-slate-600" data-i18n="faq.a2">Transferencia o Mercado Pago.</p>
+        </details>
+        <details class="border rounded-lg p-4">
+          <summary class="font-semibold" data-i18n="faq.q3">¿Cuánto dura el producto?</summary>
+          <p class="mt-2 text-slate-600" data-i18n="faq.a3">El fresco 48 horas refrigerado. El ahumado, según etiqueta del pack.</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="contacto" class="max-w-5xl mx-auto px-4 py-12">
+      <h2 class="text-2xl font-bold text-mar mb-3" data-i18n="contact.title">Contacto</h2>
+      <p class="mb-2" data-i18n="contact.phone">WhatsApp: +56 9 1234 5678</p>
+      <p class="mb-4" data-i18n="contact.hours">Horario: lun a sáb 09:00 a 18:00 (Chile)</p>
+      <a id="whatsappBtn2" href="#" class="inline-block bg-salmon text-white px-5 py-3 rounded-lg font-semibold" data-i18n="contact.cta">Escribir ahora</a>
+    </section>
+  </main>
+
+  <footer class="bg-mar text-white text-sm py-6">
+    <div class="max-w-5xl mx-auto px-4 flex flex-wrap justify-between gap-2">
+      <p>© 2026 Salmón del Sur</p>
+      <p data-i18n="footer.note">Sitio de práctica Skillshop + SPCK</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
